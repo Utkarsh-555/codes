@@ -1,0 +1,29 @@
+//Reverse the array from a given position
+#include <bits/stdc++.h> 
+using namespace std;
+int main()
+{
+    
+	int i,n;
+	cin>>n;
+	while(n--)
+	{
+        int a,b;
+        cin>>a;
+        cin>>b;
+        int pos=1,arr[a];
+        for(i=0;i<a;i++)
+        {
+            if(i>=b)
+            {
+                cin>>arr[a-pos];
+                pos++;
+            }
+            else
+            cin>>arr[i];
+        }
+        for(i=0;i<a;i++)
+        {
+            cout<<arr[i]<<" ";
+        }
+}}
