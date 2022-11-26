@@ -1,0 +1,14 @@
+ int lengthOfLastWord(string s)
+    {
+        int l=s.length(),pos=0;
+        while(s[l-1]==' ')
+            l--;
+        for(int i=l-1;i>=0;i--)
+        {
+            if(s[i]==' ')
+                break;
+            else
+                pos=pos+1;
+        }
+        return pos;
+        
