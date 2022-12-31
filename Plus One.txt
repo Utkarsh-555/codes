@@ -1,0 +1,36 @@
+Plus One
+
+class Solution {
+public:
+    vector<int> plusOne(vector<int>& digits) 
+    {
+        vector<int> a;
+        int i=digits.size()-1,carry=0;
+        if(digits[i]+1>9)
+        {
+            carry=1;
+            digits[i]=0;
+            i=i-1;
+        }
+        else
+        {
+            digits[i]=digits[i]+1;
+            i=i-1;
+        }
+        while(i>=0)
+        {
+            if(digits[i]+carry>9)
+            digits[i]=0;
+            else
+            {
+                digits[i]=digits[i]+carry;
+                carry=0;
+            }
+            i--;
+        }
+        if(carry==1)
+        digits.insert(digits.begin(),1);
+    
+    return digits;
+}
+};
